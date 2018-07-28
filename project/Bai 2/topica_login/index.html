@@ -1,0 +1,70 @@
+<html lang="en">
+  <head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="853220208001-o12l4m1e5j61rq2k7pkfq8dqj1q5pq0o.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="google.js" "></script>
+    <script src="facebook.js" "></script>
+    <style>
+      .g-signin2{
+        margin-top: 30px;
+        margin-left: 620px;
+      }
+
+      .data{
+        display: none;
+        text-align: center
+      }
+
+      .facebook{
+        text-align: center;
+      }
+
+      .fb_data{
+        display: none;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+      <div class="data">
+        <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+          <h2>Google Acount</h2>
+          <img id="pic" class="img-circle" width="100" height="100"/>
+          <br></br>
+          <li id="name" class="list-group-item list-group-item-warning"></li>
+          <li id="email" class="list-group-item list-group-item-info"></li>
+          <li id="id" class="list-group-item list-group-item-success"></li>
+          <br>
+          <!-- <a href="http://localhost/topica_login/index.html" onclick="signOut()" class="btn btn-danger">Sign Out</a> -->
+          <a href="#" onclick="signOut()" class="btn btn-danger">Sign Out</a>
+          <h2>Facebook Acount</h2>
+      </div>
+      
+    </div>
+     <!-- <iframe id="logoutframe" src="https://accounts.google.com/logout" style="display: none"></iframe> -->
+    <hr>
+    <br></br>
+    <div class="facebook col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+        </fb:login-button>
+        <div id="status"></div>
+        <br>
+      
+        <div class="fb_data">
+          <br><img id="fb_pic" class="img-circle" width="50" height="50"/><br>
+          <li id="fb_name" class="list-group-item list-group-item-warning"></li>
+          <li id="fb_email" class="list-group-item list-group-item-info"></li>
+          <li id="fb_birthday" class="list-group-item list-group-item-success"></li>
+          <li id='fb_location'class="list-group-item list-group-item-danger"></li>
+        </div>
+        <!-- <a onclick="fbLogout()" class="btn btn-primary">Sign Out</a> -->
+        
+      </div>
+  </body>
+</html>
